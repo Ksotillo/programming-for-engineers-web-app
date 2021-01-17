@@ -1,59 +1,74 @@
-import styles from '../styles/Home.module.css'
+import { Col, Container, Row,  } from 'styled-bootstrap-grid'
+import { WelcomeSubtitle, WelcomeTitle } from 'UI/Titles/Titles';
+import { Box } from 'UI/Box/Box'
+import ClassCard from 'components/ClassCard/ClassCard';
+import Tilt from 'react-parallax-tilt';
+import styled from 'styled-components';
+import { motion, Variants, Transition } from 'framer-motion';
+
+const variants: Variants = {
+    visible: i => ({
+        opacity: 1,
+        transform: 'translateY(0px)',
+        transition: {
+            delay: i * 0.1
+        }
+    }),
+    hidden: {
+        opacity: 0,
+        transform: 'translateY(60px)',
+    }
+}
+
+// const exits: Variants = {
+//     visible: i => ({
+//         opacity: 1,
+//         transform: 'translateY(0px)',
+//         transition: {
+//             delay: i * 0.1
+//         }
+//     }),
+//     hidden: {
+//         opacity: 0,
+//         transform: 'translateY(60px)',
+//     }
+// }
+
+const transition: Transition = { duration: .5 }
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
+        <Container fluid>
+            <Row alignItems={'center'} justifyContent='center' >
+                <Col lg={8} >
+                    <motion.div initial='hidden' animate='visible' variants={variants} custom={0} transition={transition}>
+                        <WelcomeTitle p={3} mt={4} >
+                            ¡Hola! Bienvenido a la página de presentaciones de Programación para Ingenieros
+                        </WelcomeTitle>
+                    </motion.div>
+                </Col>
+                <Col lg={6}>
+                    <motion.div initial='hidden' animate='visible' variants={variants} custom={1} transition={transition}>
+                        <WelcomeSubtitle>
+                            A continuación puedes encontrar todas las presentaciones de cada una de las clases
+                        </WelcomeSubtitle>
+                    </motion.div>
+                </Col>
+            </Row>
+            <Box mt={5} px={4}>
+                <Row>
+                    <Col col={3} xs={3}>
+                        <motion.div initial='hidden' animate='visible' variants={variants} custom={2} transition={transition}>
+                            <ClassCard
+                                classNumber={'01'}
+                                classDate={'17/01/2021'}
+                                title={'Introducción a la materia'}
+                                decription={'Presentación del profesor y de como iremos llevando la materia'}
+                            />
+                        </motion.div>
+                    </Col>
+                </Row>
+            </Box>
+        </Container>
   )
 }
