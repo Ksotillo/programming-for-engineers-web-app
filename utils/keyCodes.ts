@@ -1,0 +1,7 @@
+const LEFT_ARROW_KEY = 37;
+const RIGHT_ARROW_KEY = 39;
+
+export {
+    LEFT_ARROW_KEY,
+    RIGHT_ARROW_KEY
+}

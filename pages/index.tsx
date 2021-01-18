@@ -2,9 +2,6 @@ import { Col, Container, Row,  } from 'styled-bootstrap-grid'
 import { WelcomeSubtitle, WelcomeTitle } from 'UI/Titles/Titles';
 import { Box } from 'UI/Box/Box'
 import ClassCard from 'components/ClassCard/ClassCard';
-import Tilt from 'react-parallax-tilt';
-import styled from 'styled-components';
-import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { motion, useAnimation } from 'framer-motion';
 import { useEffect } from 'react';
