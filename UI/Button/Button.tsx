@@ -18,7 +18,7 @@ appearance: none;
 cursor: pointer;
 `;
 
-const ColoredText = styled.div`
+const ColoredText = styled.div<{ children?: HTMLCollection | string } & React.HTMLAttributes<HTMLDivElement>>`
 background: linear-gradient(90deg, ${({ theme }) => theme.gradientColors.gradientColor1} 0%, ${({ theme }) => theme.gradientColors.gradientColor2} 33%, ${({ theme }) => theme.gradientColors.gradientColor3} 66%,  ${({ theme }) => theme.gradientColors.gradientColor4} 100%);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
@@ -30,6 +30,7 @@ background-size: 400% 400%;
 const ButtonGradientText = ({ onClick, children, ...otherProps }: ButtonComponentProps) => {
     return (
         <Button onClick={onClick} {...otherProps}>
+            {/**@ts-ignore */}
             <ColoredText>
                 {children}
             </ColoredText>
