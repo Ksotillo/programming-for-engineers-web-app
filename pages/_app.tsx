@@ -15,16 +15,16 @@ export default function MyApp({ Component, pageProps }) {
     const currentClass = classes[currentClassKey];
     const currentSlideValue = pathArray[pathArray.length - 1]
     const currentSlide = +currentSlideValue[currentSlideValue.length - 1];
-
+    console.log('Slide actual', currentSlide)
     return (
         <>
         <Head>
             <meta charSet="utf-8" />
             <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"></meta>
-            <meta name="description" content="Description" />
+            <meta name="description" content="Página de presentaciones para la materia de programación para ingenieros" />
             <meta name="keywords" content="Keywords" />
-            <title>Next.js PWA Example</title>
+            <title>{`Programación para ingenieros ${currentClass ? `| ${currentClass.title}` : '' }`}</title>
 
             <link rel="manifest" href="/manifest.json" />
             <link
