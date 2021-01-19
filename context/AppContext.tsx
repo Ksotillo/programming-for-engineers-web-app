@@ -32,13 +32,21 @@ interface ApplicationContext {
 export const AppContext = createContext<ApplicationContext>({
     theme: {
         gradientColors: {
-            gradientColor1: '#2A1ec7',
-            gradientColor2: '#07061b',
-            gradientColor3: '#2114A3',
-            gradientColor4: '#1b145e',
+            // gradientColor1: '#2A1ec7',
+            // gradientColor2: '#07061b',
+            // gradientColor3: '#2114A3',
+            // gradientColor4: '#1b145e',
+            gradientColor1: '#9A65F8',
+            gradientColor2: '#4247D7',
+            gradientColor3: '#26CEDF',
+            gradientColor4: '#625BF8',
         },
-        primaryColor: '',
-        secondaryColor: '',
+        primaryColor: '#A488CF',
+        secondaryColor: '#503E61',
+        fontFamilyBase: 'Poppins, Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif',
+        textShadow: '0 3px 4px rgba(0,0,0,.1)',
+        transition: 'all .3s ease',
+        boxShadow: '0 8px 32px 0 rgba( 45,45,45,0.37 )'
     }
 })
 

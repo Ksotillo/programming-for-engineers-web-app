@@ -14,11 +14,12 @@ const toCamelCase = (str) => {
   }).replace(/-/ig, '')
 }
 
+type Size = 'custom' | 'custom-size' | 'sm' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl' | '8xl' | '9xl';
 export interface IconProps {
     className?: string;
     name: keyof typeof icons;
     content?: string | Array<any>;
-    size?: 'custom' | 'custom-size' | 'sm' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl' | '8xl' | '9xl';
+    size?: Size;
     customClasses?: string | Array<any> | object;
     src?: string;
     title?: string;
@@ -90,7 +91,7 @@ const Icon = (props: IconProps) => {
           dangerouslySetInnerHTML={{__html: titleCode + iconCode}}
         />
       }
-      { src && !use &&
+      {/* { src && !use &&
         <Img
           {...attributes}
           className={className}
@@ -98,7 +99,7 @@ const Icon = (props: IconProps) => {
           role="img"
           size={computedSize}
         />
-      }
+      } */}
       { !src && use &&
         <Svg
           {...attributes}
@@ -132,7 +133,7 @@ function getSize(size: IconProps['size']) {
     return sizes[size] || '1rem'
 }
 
-const Svg = styled.svg`
+const Svg = styled.svg<{ size: Size }>`
 display: inline-block;
 color: inherit;
 text-align: center;

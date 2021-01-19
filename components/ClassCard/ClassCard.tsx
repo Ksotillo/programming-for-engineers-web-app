@@ -18,7 +18,7 @@ const ClassCard = ({
     title,
     decription,
     className
-}) => {
+}: ClassCardProps) => {
 
     return (
         <TiltStyled glareEnable glareMaxOpacity={1} >
@@ -123,4 +123,5 @@ cursor: pointer;
 }
 `;
 
-export default styled(ClassCard)``;
+export default ClassCard;
+// export default styled<ClassCardProps>(ClassCard)``;
