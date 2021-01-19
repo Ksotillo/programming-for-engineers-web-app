@@ -13,9 +13,9 @@ export default function MyApp({ Component, pageProps }) {
     const pathArray = router.pathname.split('/');
     const currentClassKey = pathArray[2];
     const currentClass = classes[currentClassKey];
-    const currentSlideValue = pathArray[pathArray.length - 1]
-    const currentSlide = +currentSlideValue[currentSlideValue.length - 1];
-    console.log('Slide actual', currentSlide)
+    const currentSlideValue = pathArray[pathArray.length - 1].split('-')[1]
+    const currentSlide = +currentSlideValue;
+
     return (
         <>
         <Head>

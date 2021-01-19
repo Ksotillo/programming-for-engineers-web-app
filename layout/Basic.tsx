@@ -42,6 +42,28 @@ export const GlobalStyle = createGlobalStyle`
         border-radius: 10px;
     }
 
+    /* width */
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        box-shadow: 0 8px 32px 0 rgba( 31,38,135,0.37 );
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        backdrop-filter: blur( 4px );
+        background: rgba( 255,255,255,0.25 );
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        backdrop-filter: blur( 4px );
+        background: rgba( 255,255,255,0.5 );
+    }
+
     // -------------------------- ANIMATIONS ------------------------------ //
 
     @-webkit-keyframes GradientAnimator {

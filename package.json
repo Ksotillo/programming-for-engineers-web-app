@@ -12,6 +12,7 @@
     "next": "latest",
     "next-pwa": "^3.1.0",
     "react": "^16.13.1",
+    "react-code-blocks": "^0.0.8",
     "react-dom": "^16.13.1",
     "react-parallax-tilt": "^1.4.70",
     "styled-bootstrap-grid": "^3.1.0",

@@ -6,15 +6,15 @@ import { useRouter } from 'next/router'
 import { motion, useAnimation } from 'framer-motion';
 import { useEffect } from 'react';
 import { variants, transition } from 'utils/motionVariants';
-
+import classes from 'utils/classes';
 
 export default function Home() {
     const router = useRouter()
     const controls = useAnimation();
 
-    const goToClass = async () => {
+    const goToClass = async (classNumber) => {
         await controls.start('exits')
-        router.push('/classes/class-1/slide1')
+        router.push(`/classes/class-${classNumber}/slide-1`)
     }
 
     useEffect(() => {
@@ -41,16 +41,18 @@ export default function Home() {
             </Row>
             <Box mt={5} px={4}>
                 <Row>
-                    <Col col={3} xs={3} onClick={goToClass} >
-                        <motion.div initial='hidden' animate={controls} variants={variants} custom={2} transition={transition}>
+                    {(Object.values(classes)).map((klass, index) => 
+                    <Col col={3} xs={3} onClick={() => goToClass(klass.classNumber)} >
+                        <motion.div initial='hidden' animate={controls} variants={variants} custom={index + 2} transition={transition}>
                             <ClassCard
-                                classNumber={'01'}
-                                classDate={'17/01/2021'}
-                                title={'Introducción a la materia'}
-                                decription={'Presentación del profesor y de como iremos llevando la materia'}
+                                classNumber={klass.classNumber}
+                                classDate={klass.date}
+                                title={klass.title}
+                                decription={klass.description}
                             />
                         </motion.div>
                     </Col>
+                    )}
                 </Row>
             </Box>
         </Container>

@@ -3,6 +3,7 @@ import { space, layout, color, typography  } from 'styled-system';
 
 interface TypographyProps {
     color: 'fainted' | 'semiTransparent';
+    shadow: boolean;
     [x: string]: any;
 }
 
@@ -21,7 +22,8 @@ export const H1 = styled.h1<TypographyProps>`
     ${layout}
     ${color}
     ${typography}
-    color: ${props => getColor(props.color)}
+    color: ${props => getColor(props.color)};
+    text-shadow: ${({ shadow, theme }) => shadow ? theme.textShadow : null}
 
 `
 export const H2 = styled.h2<TypographyProps>`
@@ -30,7 +32,8 @@ export const H2 = styled.h2<TypographyProps>`
     ${layout}
     ${color}
     ${typography}
-    color: ${props => getColor(props.color)}
+    color: ${props => getColor(props.color)};
+    text-shadow: ${({ shadow, theme }) => shadow ? theme.textShadow : null}
 `
 export const H3 = styled.h3<TypographyProps>`
     margin-bottom: 0;
@@ -38,7 +41,8 @@ export const H3 = styled.h3<TypographyProps>`
     ${layout}
     ${color}
     ${typography}
-    color: ${props => getColor(props.color)}
+    color: ${props => getColor(props.color)};
+    text-shadow: ${({ shadow, theme }) => shadow ? theme.textShadow : null}
 `
 export const H4 = styled.h4<TypographyProps>`
     margin-bottom: 0;
@@ -46,7 +50,8 @@ export const H4 = styled.h4<TypographyProps>`
     ${layout}
     ${color}
     ${typography}
-    color: ${props => getColor(props.color)}
+    color: ${props => getColor(props.color)};
+    text-shadow: ${({ shadow, theme }) => shadow ? theme.textShadow : null}
 `
 export const H5 = styled.h5<TypographyProps>`
     margin-bottom: 0;
@@ -54,7 +59,8 @@ export const H5 = styled.h5<TypographyProps>`
     ${layout}
     ${color}
     ${typography}
-    color: ${props => getColor(props.color)}
+    color: ${props => getColor(props.color)};
+    text-shadow: ${({ shadow, theme }) => shadow ? theme.textShadow : null}
 `
 export const H6 = styled.h6<TypographyProps>`
     margin-bottom: 0;
@@ -62,7 +68,8 @@ export const H6 = styled.h6<TypographyProps>`
     ${layout}
     ${color}
     ${typography}
-    color: ${props => getColor(props.color)}
+    color: ${props => getColor(props.color)};
+    text-shadow: ${({ shadow, theme }) => shadow ? theme.textShadow : null}
 `
 export const Text = styled.p<TypographyProps>`
     margin-bottom: 0;
@@ -70,5 +77,6 @@ export const Text = styled.p<TypographyProps>`
     ${layout}
     ${color}
     ${typography}
-    color: ${props => getColor(props.color)}
+    color: ${props => getColor(props.color)};
+    text-shadow: ${({ shadow, theme }) => shadow ? theme.textShadow : null}
 `

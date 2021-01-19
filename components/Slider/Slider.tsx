@@ -29,7 +29,7 @@ export const Slider = ({
 }: SliderProps) =>{ 
     const router = useRouter();
     const controls = useAnimation();
-    const { currentControls } = useContext(AppContext)
+    const { controls: slidesControl } = useContext(AppContext)
 
     const formatToTwoDigits = (number: number) => number < 10 ? `0${number}` : number;
 
@@ -40,21 +40,21 @@ export const Slider = ({
 
     const getCurrentSlide = () => {
         const pathArray = location.pathname.split('/');
-        const currentSlideValue = pathArray[pathArray.length - 1]
-        const currentSlide = +currentSlideValue[currentSlideValue.length - 1];
+        const currentSlideValue = pathArray[pathArray.length - 1].split('-')[1]
+        const currentSlide = +currentSlideValue;
         return currentSlide;
     }
 
     const goToNextSlide = async () => {
         if (getCurrentSlide() < totalSlides) {
-            await currentControls.start('exits')
-            router.push(`/classes/class-${classNumber}/slide${getCurrentSlide() + 1}`)
+            await slidesControl.start('exits')
+            router.push(`/classes/class-${classNumber}/slide-${getCurrentSlide() + 1}`)
         }
     }
     const goToPrevSlide = async () => {
         if (getCurrentSlide() > 1) {
-            await currentControls.start('exits')
-            router.push(`/classes/class-${classNumber}/slide${getCurrentSlide() - 1}`)
+            await slidesControl.start('exits')
+            router.push(`/classes/class-${classNumber}/slide-${getCurrentSlide() - 1}`)
         }
     }
 
@@ -110,7 +110,7 @@ export const Slider = ({
                     />
                 </motion.div>
                 <motion.div initial='hidden' animate={controls} variants={variants} custom={4} transition={transition}>
-                    <Text color='fainted'>{formatToTwoDigits(currentSlide)}/{totalSlides}</Text>
+                    <Text color='fainted'>{formatToTwoDigits(currentSlide)}/{formatToTwoDigits(totalSlides)}</Text>
                 </motion.div>
                 <motion.div initial='hidden' animate={controls} variants={variants} custom={5} transition={transition}>
                     <GlassIconButton

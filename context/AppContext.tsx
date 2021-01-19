@@ -1,3 +1,4 @@
+import { AnimationControls, useAnimation } from 'framer-motion';
 import { createContext, Dispatch, SetStateAction, useState } from 'react';
 
 interface ApplicationContext {
@@ -10,6 +11,10 @@ interface ApplicationContext {
         },
         primaryColor: string,
         secondaryColor: string,
+        fontFamilyBase: string;
+        textShadow: string;
+        transition: string;
+        boxShadow: string;
     },
     setTheme?: Dispatch<SetStateAction<{
         gradientColors: {
@@ -20,7 +25,8 @@ interface ApplicationContext {
         };
         primaryColor: string;
         secondaryColor: string;
-    }>>
+    }>>,
+    controls?: AnimationControls
 }
 
 export const AppContext = createContext<ApplicationContext>({
@@ -53,10 +59,13 @@ export const AppProvider = ({ children }) => {
         fontFamilyBase: 'Poppins, Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif',
         textShadow: '0 3px 4px rgba(0,0,0,.1)',
         transition: 'all .3s ease',
+        boxShadow: '0 8px 32px 0 rgba( 45,45,45,0.37 )'
     })
 
+    const controls = useAnimation();
+
     return (
-        <AppContext.Provider value={{ theme, setTheme }}>
+        <AppContext.Provider value={{ theme, setTheme, controls }}>
             {children}
         </AppContext.Provider>
     );
