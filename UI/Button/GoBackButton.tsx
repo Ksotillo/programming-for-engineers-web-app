@@ -36,6 +36,7 @@ export const GoBackButtonStyled = styled.button`
 export const GoBackButton = ({ onClick, ...otherProps }: ButtonComponentProps) => {
     return (
         <GoBackButtonStyled onClick={onClick} title='Volver' {...otherProps}>
+            {/**@ts-ignore */}
             <Icon className='icon' name='chevronCircleLeft'  {...otherProps} />
         </GoBackButtonStyled>
     );
