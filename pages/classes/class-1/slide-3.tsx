@@ -24,35 +24,39 @@ const schedule = [
     `
     👉 Introducción a la programación.
     👉 Análisis de problemas.
-    👉 Introducción VBA.
-    👉 Estructura de un programa uso de subs.
-    👉Lectura y escritura en Input y MsgBox, cálculos sencillos
     `,
     `
-    👉 Lectura y escritura en y desde celdas, cálculos sencillos.
+    👉 Introducción a Python.
+    👉 Variables y tipos de datos.
+    👉 Precedencia de operadores.
+    👉 Entrada y salida en Python.
+    `,
+    `
     👉 Estructuras de control: estructuras selectivas.
-    `,
-    `
+    👉 Operadores lógico y comparadores.
     👉 Practica y ejercicios.
     `,
     `
+    👉 Introducción a las listas
     👉 Estructuras de control: estructuras repetitivas.
     `,
     `
     👉 Repaso, consultas y ejercicios
     `,
     `
-    👉 Programación Modular.
-    👉 Uso de formularios múltiples. Form show. Form hide. Controles.
+    👉 Funciones.
+    👉 Uso de import y programación modular
     `,
     `
-    👉 Arreglos
+    👉 Introducción a los diccionarios
+    👉 Métodos de ordenamiento
     `,
     `
-    👉 Registros
+    👉 Introducción a la programación orientada a objetos
+    👉 Herencia y polimorfismo
     `,
     `
-    👉 Arreglos de registros
+    👉 Lectura y escritura de archivos.
     `,
     `
     👉 Repaso, consultas y ejercicios
@@ -192,7 +196,7 @@ const items = [
                     Preparadurías
                 </motion.h2>
                 <motion.p initial='hidden' animate='visible' variants={variants} exit='exits' custom={2} transition={transition}>
-                    Hay 4 preparadores. Hay dos horarios para las prepas: viernes y sábado de 12 a 2
+                    Pus no hay jaja salu2
                 </motion.p>
             </GlassCardContent>
         )
