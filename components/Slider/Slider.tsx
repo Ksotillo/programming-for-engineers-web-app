@@ -18,6 +18,12 @@ interface SliderProps {
     currentSlide: number;
     totalSlides: number;
     classNumber: number;
+    colors: {
+        gradientColor1: string;
+        gradientColor2: string;
+        gradientColor3: string;
+        gradientColor4: string;
+    }
 }
 
 export const Slider = ({
@@ -25,11 +31,12 @@ export const Slider = ({
     title,
     currentSlide,
     totalSlides,
-    classNumber
+    classNumber,
+    colors
 }: SliderProps) =>{ 
     const router = useRouter();
     const controls = useAnimation();
-    const { controls: slidesControl } = useContext(AppContext)
+    const { controls: slidesControl, setTheme } = useContext(AppContext)
 
     const formatToTwoDigits = (number: number) => number < 10 ? `0${number}` : number;
 
@@ -74,6 +81,14 @@ export const Slider = ({
     useEffect(() => {
         window.addEventListener('keydown', handleKeyDown);
         controls.start('visible')
+        if (colors) {
+            setTheme(prevTheme => ({
+                ...prevTheme,
+                gradientColors: {
+                    ...colors
+                }
+            }))
+        }
         return () => window.removeEventListener('keydown', handleKeyDown)
     }, [])
 

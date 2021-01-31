@@ -54,6 +54,7 @@ export default function MyApp({ Component, pageProps }) {
                             currentSlide={currentSlide}
                             classNumber={currentClass.classNumber}
                             totalSlides={currentClass.totalSlides}
+                            colors={currentClass.colors}
                         >
                             <Component {...pageProps} />
                         </Slider>

@@ -4,13 +4,15 @@ import { Box } from 'UI/Box/Box'
 import ClassCard from 'components/ClassCard/ClassCard';
 import { useRouter } from 'next/router'
 import { motion, useAnimation } from 'framer-motion';
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import { variants, transition } from 'utils/motionVariants';
 import classes from 'utils/classes';
+import { AppContext, gradientColors } from 'context/AppContext';
 
 export default function Home() {
     const router = useRouter()
     const controls = useAnimation();
+    const { setTheme } = useContext(AppContext);
 
     const goToClass = async (classNumber) => {
         await controls.start('exits')
@@ -19,6 +21,12 @@ export default function Home() {
 
     useEffect(() => {
         controls.start('visible')
+        setTheme(prevTheme => ({
+            ...prevTheme,
+            gradientColors:{
+                ...gradientColors
+            }
+        }))
     }, [])
 
     return (
