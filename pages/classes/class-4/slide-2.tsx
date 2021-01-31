@@ -11,6 +11,7 @@ import { GlassCard } from "UI/Card/Card";
 import { Box } from "UI/Box/Box";
 import { CodeBlock, dracula } from "react-code-blocks";
 import { RoundedImage } from "UI/Image/Image";
+import { ColoredText } from 'UI/Button/Button';
 import { RoundedImageContainer } from "UI/ImageContainer/RoundedImage";
 
 
@@ -40,6 +41,13 @@ const Class4Slide2 = () => {
                                         <br/>
                                         <br/>
                                         Piensa en una caja, una caja a la cual le pusiste de nombre, por decir, "juguetes" y guardas ahí el número de tu ex.
+                                        <Box bg={'white'} width='fit-content' borderRadius={'10px'} p={2}>
+                                            <ColoredText>
+                                                <a href='https://www.programiz.com/python-programming/variables-constants-literals'>
+                                                    Más info sobre las variables
+                                                </a>
+                                            </ColoredText>
+                                        </Box>
                                     </H3>
                                 </motion.div>
                             </GlassCard>

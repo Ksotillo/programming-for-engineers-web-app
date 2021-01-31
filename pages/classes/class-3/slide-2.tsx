@@ -57,6 +57,7 @@ const Class3Slide2 = () => {
                 </Col>
                 <Col col={6}>
                     <Box display='flex' alignItems='center' justifyContent='space-between' py={3}>
+                        {/* @ts-ignore */}
                         <iframe height="500px" width="100%" src="https://repl.it/@Ksotillo/Inputs-and-Outputs?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
                     </Box>
                 </Col>

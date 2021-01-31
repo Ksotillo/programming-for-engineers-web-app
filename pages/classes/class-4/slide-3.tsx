@@ -54,6 +54,7 @@ const Class4Slide2 = () => {
                 </Col>
                 <Col col={6}>
                     <motion.div  initial='hidden' animate={controls} variants={variants} custom={5} transition={transition}>
+                        {/* @ts-ignore */}
                         <iframe height="500px" width="100%" src="https://repl.it/@Ksotillo/Variables?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
                     </motion.div>
                 </Col>
