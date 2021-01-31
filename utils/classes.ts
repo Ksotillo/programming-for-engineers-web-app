@@ -46,13 +46,26 @@ const classes: {
         title: 'Variables y tipos de datos',
         classNumber: 4,
         totalSlides: 7,
-        date: '27/01/2020',
+        date: '31/01/2020',
         description: 'En esta clase revisamos qué son las variables y cuales son los tipos de datos en Python',
         colors: {
             gradientColor1: '#75cfb8',
             gradientColor2: '#bbdfc8',
             gradientColor3: '#f0e5d8',
             gradientColor4: '#ffc478',
+        }
+    },
+    'class-5': {
+        title: 'Precedencia de operadores',
+        classNumber: 5,
+        totalSlides: 2,
+        date: '31/01/2020',
+        description: 'En esta clase revisaremos el orden de presedencia de los operadores aritméticos',
+        colors: {
+            gradientColor1: '#94b5c0',
+            gradientColor2: '#350b40',
+            gradientColor3: '#ad6c80',
+            gradientColor4: '#ee99a0',
         }
     }
 }

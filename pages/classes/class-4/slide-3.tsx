@@ -16,7 +16,7 @@ import { RoundedImageContainer } from "UI/ImageContainer/RoundedImage";
 
 
 
-const Class4Slide2 = () => {
+const Class4Slide3 = () => {
     const controls = useSlideAnimationControls();
 
     return (
@@ -53,7 +53,7 @@ const Class4Slide2 = () => {
                     </Box>
                 </Col>
                 <Col col={6}>
-                    <motion.div  initial='hidden' animate={controls} variants={variants} custom={5} transition={transition}>
+                    <motion.div  initial='hidden' animate={controls} variants={variants} custom={3} transition={transition}>
                         {/* @ts-ignore */}
                         <iframe height="500px" width="100%" src="https://repl.it/@Ksotillo/Variables?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
                     </motion.div>
@@ -65,4 +65,4 @@ const Class4Slide2 = () => {
 
 
 
-export default Class4Slide2;
+export default Class4Slide3;
