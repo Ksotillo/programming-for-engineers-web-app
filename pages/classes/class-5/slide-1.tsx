@@ -12,7 +12,7 @@ const Class5Slide1 = () => {
             <Row>
                 <motion.div  initial='hidden' animate={controls} variants={variants} custom={0} transition={transition}>
                     <Title>
-                        Python: <br/> Presedencia de Operadores
+                        Python: <br/> Precedencia de Operadores
                     </Title>
                 </motion.div>
             </Row>

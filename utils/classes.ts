@@ -60,7 +60,7 @@ const classes: {
         classNumber: 5,
         totalSlides: 2,
         date: '31/01/2020',
-        description: 'En esta clase revisaremos el orden de presedencia de los operadores aritméticos',
+        description: 'En esta clase revisaremos el orden de precedencia de los operadores aritméticos',
         colors: {
             gradientColor1: '#94b5c0',
             gradientColor2: '#350b40',
