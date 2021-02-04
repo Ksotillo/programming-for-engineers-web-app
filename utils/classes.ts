@@ -67,6 +67,19 @@ const classes: {
             gradientColor3: '#ad6c80',
             gradientColor4: '#ee99a0',
         }
+    },
+    'class-6': {
+        title: 'Operadores lógicos y de comparación',
+        classNumber: 6,
+        totalSlides: 2,
+        date: '04/02/2020',
+        description: 'En esta clase revisaremos los operadores lógicos y de comparación, usados comunmente para expresar operaciones lógicas',
+        colors: {
+            gradientColor1: '#845ec2',
+            gradientColor2: '#ffc75f',
+            gradientColor3: '#f9f871',
+            gradientColor4: '#ff5e78',
+        }
     }
 }
 
