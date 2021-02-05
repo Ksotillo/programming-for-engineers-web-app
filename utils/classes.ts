@@ -72,13 +72,26 @@ const classes: {
         title: 'Operadores lógicos y de comparación',
         classNumber: 6,
         totalSlides: 2,
-        date: '04/02/2020',
+        date: '05/02/2020',
         description: 'En esta clase revisaremos los operadores lógicos y de comparación, usados comunmente para expresar operaciones lógicas',
         colors: {
             gradientColor1: '#845ec2',
             gradientColor2: '#ffc75f',
             gradientColor3: '#f9f871',
             gradientColor4: '#ff5e78',
+        }
+    },
+    'class-7': {
+        title: 'Estructuras de control: estructuras selectivas',
+        classNumber: 7,
+        totalSlides: 3,
+        date: '05/02/2020',
+        description: 'En esta clase revisaremos las estructuras selectivas, las cuales nos permiten construir el camino de un programa mediante condicionales',
+        colors: {
+            gradientColor1: '#fcd1d1',
+            gradientColor2: '#ece2e1',
+            gradientColor3: '#d3e0dc',
+            gradientColor4: '#aee1e1',
         }
     }
 }
