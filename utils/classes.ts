@@ -97,7 +97,7 @@ const classes: {
     'class-8': {
         title: 'Estructuras de control: estructuras repetitivas',
         classNumber: 8,
-        totalSlides: 5,
+        totalSlides: 3,
         date: '16/02/2020',
         description: 'En esta clase revisaremos las estructuras repetitivas, los cuales nos permiten repeitr código mediante los bucles',
         colors: {
