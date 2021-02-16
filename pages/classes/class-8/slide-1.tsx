@@ -5,14 +5,14 @@ import { motion } from "framer-motion";
 import { variants, transition } from "utils/motionVariants";
 import { useSlideAnimationControls } from "hooks/useAnimationControls";
 
-const Class7Slide1 = () => {
+const Class8Slide1 = () => {
     const controls = useSlideAnimationControls();
     return (
         <Container>
             <Row>
                 <motion.div  initial='hidden' animate={controls} variants={variants} custom={0} transition={transition}>
                     <Title>
-                        Python: <br/> Estructuras selectivas
+                        Python: <br/> Estructuras repetitivas
                     </Title>
                 </motion.div>
             </Row>
@@ -27,4 +27,4 @@ const Title = styled.h1`
 `
 
 
-export default Class7Slide1;
+export default Class8Slide1;

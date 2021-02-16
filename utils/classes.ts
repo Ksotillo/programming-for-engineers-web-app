@@ -93,6 +93,19 @@ const classes: {
             gradientColor3: '#d3e0dc',
             gradientColor4: '#aee1e1',
         }
+    },
+    'class-8': {
+        title: 'Estructuras de control: estructuras repetitivas',
+        classNumber: 8,
+        totalSlides: 5,
+        date: '16/02/2020',
+        description: 'En esta clase revisaremos las estructuras repetitivas, los cuales nos permiten repeitr código mediante los bucles',
+        colors: {
+            gradientColor1: '#ff5f5f',
+            gradientColor2: '#ff8181',
+            gradientColor3: '#ffa9a9',
+            gradientColor4: '#ffb5b5',
+        }
     }
 }
 
