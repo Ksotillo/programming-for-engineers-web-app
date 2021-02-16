@@ -77,7 +77,7 @@ const Class8Slide3 = () =>{
                 <Col col={6}>
                     <motion.div  initial='hidden' animate={controls} variants={variants} custom={0} transition={transition}>
                         <H1 shadow>
-                            Los bucles nos permite repetir código dentro de nuestro programa
+                            Los bucles (o ciclos) nos permite repetir código dentro de nuestro programa
                         </H1>
                     </motion.div>
                     <Box mt={4} pr={3}>
