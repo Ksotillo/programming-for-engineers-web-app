@@ -106,6 +106,19 @@ const classes: {
             gradientColor3: '#ffa9a9',
             gradientColor4: '#ffb5b5',
         }
+    },
+    'class-9': {
+        title: 'Estructura de Datos: Listas',
+        classNumber: 9,
+        totalSlides: 4,
+        date: '19/02/2020',
+        description: 'En esta clase revisaremos las estructuras repetitivas, los cuales nos permiten repeitr código mediante los bucles',
+        colors: {
+            gradientColor1: '#dcdcdc',
+            gradientColor2: '#94ffb4',
+            gradientColor3: '#71d2cb',
+            gradientColor4: '#161d6f',
+        }
     }
 }
 
