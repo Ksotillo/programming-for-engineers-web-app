@@ -45,6 +45,7 @@ export const GlobalStyle = createGlobalStyle`
     /* width */
     ::-webkit-scrollbar {
         width: 6px;
+        height: 8px;
     }
 
     /* Track */
@@ -56,6 +57,7 @@ export const GlobalStyle = createGlobalStyle`
     ::-webkit-scrollbar-thumb {
         backdrop-filter: blur( 4px );
         background: rgba( 255,255,255,0.25 );
+        border-radius: 20px;
     }
 
     /* Handle on hover */

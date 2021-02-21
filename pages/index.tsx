@@ -1,12 +1,17 @@
+import styled from 'styled-components';
 import { Col, Container, Row,  } from 'styled-bootstrap-grid'
 import { WelcomeSubtitle, WelcomeTitle } from 'UI/Titles/Titles';
+import Image from 'next/image'
 import { Box } from 'UI/Box/Box'
+import ButtonGradientText from 'UI/Button/Button';
 import ClassCard from 'components/ClassCard/ClassCard';
 import { useRouter } from 'next/router'
 import { motion, useAnimation } from 'framer-motion';
 import { useContext, useEffect } from 'react';
 import { variants, transition } from 'utils/motionVariants';
 import classes from 'utils/classes';
+import { RoundedImageContainer } from 'UI/ImageContainer/RoundedImage'
+import { RoundedImage } from 'UI/Image/Image'
 import { AppContext, gradientColors } from 'context/AppContext';
 
 export default function Home() {
@@ -47,10 +52,10 @@ export default function Home() {
                     </motion.div>
                 </Col>
             </Row>
-            <Box mt={5} px={4}>
-                <Row>
+            <Box mt={5}>
+                <StyledRow >
                     {(Object.values(classes)).map((klass, index) => 
-                    <Col col={3} xs={3} onClick={() => goToClass(klass.classNumber)} >
+                    <Col key={index} col={3} xs={3} onClick={() => goToClass(klass.classNumber)} >
                         <motion.div initial='hidden' animate={controls} variants={variants} custom={index + 2} transition={transition}>
                             <ClassCard
                                 classNumber={klass.classNumber}
@@ -61,8 +66,39 @@ export default function Home() {
                         </motion.div>
                     </Col>
                     )}
-                </Row>
+                </StyledRow>
+            </Box>
+            <Box py={4} display={'flex'} justifyContent='center' alignItems='center' >
+                <motion.div initial='hidden' animate={controls} variants={variants} custom={3} transition={transition}>
+                    Diseñado y desarrollado por
+                </motion.div>
+                <motion.a  initial='hidden' animate={controls} variants={variants} custom={4} transition={transition}  style={{ margin: '0 .5rem' }}  href={'https://github.com/ksotillo'} target='_blank' rel='noopener noreferrer' >
+                        <RoundedImageContainer p={'.5rem'}>
+                            <RoundedImage
+                                src="/images/class-1/me.jpeg"
+                                alt="Kevin Sotillo"
+                                width={50}
+                                height={50}
+                                quality={100}
+                            />
+                        </RoundedImageContainer>
+                    </motion.a>
+                <motion.a initial='hidden' animate={controls} variants={variants} custom={5} transition={transition} style={{ margin: '0 .5rem' }} href={'https://github.com/ksotillo'} target='_blank' rel='noopener noreferrer' >
+                    <ButtonGradientText>
+                        Kevin Sotillo
+                    </ButtonGradientText>
+                </motion.a>
+                {/* <motion.div initial='hidden' animate={controls} variants={variants} custom={} transition={transition}>
+
+                </motion.div> */}
             </Box>
         </Container>
     )
 }
+
+const StyledRow = styled(Row)`
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    // overflow-y: hidden;
+    padding: 20px;
+`;

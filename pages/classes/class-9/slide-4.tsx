@@ -15,8 +15,8 @@ const dataTypes = [
         content: (
         <>
             Para poder agregar o eliminar elementos:
-             <br/>
-             <br/>
+            <br/>
+            <br/>
             <ul>
                 <li>
                     <b>append() :</b> Añade un elemento al final de la lista
@@ -47,8 +47,8 @@ const dataTypes = [
         content: (
          <>
             Utilidades varias que nos permiten manipular o tener cierta información del contenido de una lista
-             <br/>
-             <br/>
+            <br/>
+            <br/>
             <ul>
                 <li>
                     <b>index() :</b> Devuelve el indice del primer elemento que coincida con el especificado
