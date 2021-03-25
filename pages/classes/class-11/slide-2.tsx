@@ -8,42 +8,43 @@ import { useSlideAnimationControls } from "hooks/useAnimationControls";
 import { GlassCard } from "UI/Card/Card";
 import { Box, WhiteBox, ColoredTextOnHover } from "UI/Box/Box";
 import { useState } from "react";
+import { CodeBlock, dracula } from "react-code-blocks";
+
+const dictCodeBlock = `
+# Diccionario vacio
+mi_diccionario = {}
+# Usando dict
+mi_diccionario = dict()
+# Diccionario con llaves que son numeros
+mi_diccionario = {1: 'apple', 2: 'ball'}
+# Diccionario con llaves mixtas entre string y numeros
+mi_diccionario = {'name': 'John', 1: [2, 4, 3]}
+`
 
 const dataTypes = [
     {
-        title: 'Manejo de listas',
+        title: 'Diccionarios',
         content: (
         <>
-            Para poder agregar o eliminar elementos:
+            Hay varias maneras de crear un diccionario, pero en general basta con la siguiente sintaxis:
             <br/>
             <br/>
-            <ul>
-                <li>
-                    <b>append() :</b> Añade un elemento al final de la lista
-                </li>
-                <li>
-                    <b>extend() :</b> Añade todos los elementos de una lista a otra lista
-                </li>
-                <li>
-                    <b>insert() :</b> Inserta un elemento en el índice definido
-                </li>
-                <li>
-                    <b>remove() :</b> Elimina un elemento de la lista
-                </li>
-                <li>
-                    <b>pop() :</b> Elimina un elemento de la lista y devuelve el elemento eliminado
-                </li>
-                <li>
-                    <b>clear() :</b> Elimina todos los elementos de la lista
-                </li>
-            </ul>
+            <CodeBlock
+                text={
+                    dictCodeBlock
+                }
+                language={'python'}
+                showLineNumbers
+                wrapLines
+                theme={dracula}
+            />
         </>),
         frame: (// @ts-ignore
-            <iframe height="500px" width="100%" src="https://repl.it/@Ksotillo/Manejo-de-listas?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+            <iframe height="500px" width="100%" src="https://replit.com/@Ksotillo/Diccionarios?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
         )
     },
     {
-        title: 'Utilidades',
+        title: 'Manejo de diccionarios',
         content: (
          <>
             Utilidades varias que nos permiten manipular o tener cierta información del contenido de una lista
@@ -51,29 +52,35 @@ const dataTypes = [
             <br/>
             <ul>
                 <li>
-                    <b>index() :</b> Devuelve el indice del primer elemento que coincida con el especificado
+                    <b>clear() :</b> Elimina todos los elementos del diccionario
                 </li>
                 <li>
-                    <b>count() :</b> Devuelve la cantidad de veces que el elemento especificado se repite en una lista
+                    <b>copy() :</b> Devuelve una copia del diccionario
                 </li>
                 <li>
-                    <b>sort() :</b> Ordena los elementos de una lista en orden ascendente
+                    <b>get() :</b> Devuelve el valor de una llave en el diccionario
                 </li>
                 <li>
-                    <b>reverse() :</b> Invierte el orden de los elementos en una lista
+                    <b>pop() :</b> Remueve una llave del diccionario
                 </li>
                 <li>
-                    <b>copy() :</b> Devuelve una copia de la lista
+                    <b>keys() :</b> Retorna una lista con todas las llaves del diccionario
+                </li>
+                <li>
+                    <b>values() :</b> Retorna una lista con todos los valores del diccionario
+                </li>
+                <li>
+                    <b>items() :</b> Retorna una lista con todas las llaves y valores del diccionario en forma (key, value)
                 </li>
             </ul>
         </>),
         frame: (// @ts-ignore
-            <iframe height="500px" width="100%" src="https://repl.it/@Ksotillo/Utilidades-de-Listas?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+            <iframe height="500px" width="100%" src="https://replit.com/@Ksotillo/Manejo-de-Diccionarios?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
         )
     },
 ]
 
-const Class9Slide4 = () =>{
+const Class11Slide2 = () =>{
     const controls = useSlideAnimationControls();
     const [currentType, setCurrentType] = useState(0)
     return (
@@ -82,7 +89,7 @@ const Class9Slide4 = () =>{
                 <Col col={6}>
                     <motion.div  initial='hidden' animate={controls} variants={variants} custom={0} transition={transition}>
                         <H2 shadow>
-                            Existen varios comandos (funciones mejor dicho) que nos permiten manipular nuestras listas
+                            Al igual que las listas, los diccionarios nos permiten guardar distintos datos en una sola variable
                         </H2>
                     </motion.div>
                     <Box mt={4} pr={3}>
@@ -166,4 +173,4 @@ const GlassCardForTabs = styled(GlassCard)`
 
 `
 
-export default Class9Slide4;
+export default Class11Slide2;
